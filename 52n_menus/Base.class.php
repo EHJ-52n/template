@@ -137,10 +137,9 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 
             $this->children = $children;
     	    // second pass - collect 'open' menus
+    	    // starting with the currently selected item stored in $this->Itemid
     	    // TODO currently not working in J2.5
-    	    $open = array (
-    		    $this->Itemid
-    	    );
+    	    $open = array ($this->Itemid);
     	    $count = 20; // maximum levels - to prevent runaway loop
     	    $id = $this->Itemid;
 

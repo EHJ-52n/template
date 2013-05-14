@@ -85,8 +85,12 @@ $app = JFactory::getApplication();
 		-->
         <div id="ja-mainnavwrap">
             <div id="ja-mainnav">
-                <?php $jamenu->genMenu(1,1); ?>
-                <?php if ($this->countModules('user4')) { ?>
+                <?php
+                	// the first parameter defines the root element (since j2.5 it's 1, before 0)
+                	// the second parameter defines the maximum level to generate menus (CSS menu supports up to 3)
+                	$jamenu->genMenu(1,3);
+                	if ($this->countModules('user4')) { 
+				?>
 					<div id="ja-search">
 						<jdoc:include type="modules" name="user4" style="raw" />
 					</div>

@@ -15,7 +15,8 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		function JA_Base( &$params ){
 			global $Itemid;
 			$this->_params = $params;
-			$this->Itemid = $Itemid; // does not work at all.
+			// TODO Next line does not work at all: ItemId is always uninitialized!
+			$this->Itemid = $Itemid; 
 			$this->loadMenu();
 		}
 
@@ -75,8 +76,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
    	    	foreach ($rows as $index => $menuElement)
    	    	 {
    	    	 	// check if user is allowed to access the menu element?
-    		    //if ($menuElement->access <= $user->get('gid')) // old
-    		    if ($menuElement->access <= $highestUserGroup) // new 
+    		    if ($menuElement->access <= $highestUserGroup)
     		    {
     			    $parent = $menuElement->parent_id;
     			    // get list of current children for the parent of this menuElement or create new "list"
@@ -137,6 +137,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 
             $this->children = $children;
     	    // second pass - collect 'open' menus
+    	    // TODO currently not working in J2.5
     	    $open = array (
     		    $this->Itemid
     	    );
@@ -160,7 +161,6 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
     		    }
     	    }
             $this->open = $open;
-		   // $this->items = $rows;
 	    }
 	    
 	    //get highest group id from user's groups
@@ -200,7 +200,6 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 
 			$id='id="menu' . $tmp->id . '"';
 			$iParams = $this->createParameterObject( $item->params );
-			//$iParams =& new JParameter($tmp->params);
 			$itembg = '';
 			if ($this->getParam('menu_images') && $iParams->get('menu_image') && $iParams->get('menu_image') != -1) {
 				if ($this->getParam('menu_background')) {

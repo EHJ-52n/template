@@ -46,8 +46,6 @@ if (!defined ('_JA_CSS_MENU_CLASS')) {
         }
 		
 		function genMenuItem($item, $level = 0, $pos = '', $ret = 0) {
-			//if ($level) return parent::genMenuItem($item, $level, '', $ret);
-			//else 
 			return parent::genMenuItem($item, $level, $pos, $ret);
 		}
 

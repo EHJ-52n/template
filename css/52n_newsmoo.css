@@ -1,0 +1,64 @@
+/* Big menu */
+#ja-newsmoo-container {
+	text-align: left;
+}
+
+#ja-newsmoo-container li {
+	background: none;
+}
+
+#ja-newsmoo-wrap {
+	position: relative;
+	margin: 20px -5px 0 0;
+	text-align: left !important;
+}
+
+#ja-newsmoo-wrap .ja-newsmoo-items {
+	display: block;
+	margin: 0px;
+}
+
+#ja-newsmoo-wrap div {
+	float: left;
+}
+
+div:after {
+	content: "";
+}
+
+#ja-newsmoo-wrap .ja-newsmoo {
+	display: block;
+	cursor: pointer;
+	overflow: hidden;
+	background: url(../../images/newsmoo-sep.gif) repeat-x bottom left #FFFFFF;
+	position: absolute;
+	margin: 0;
+	padding: 0;
+}
+
+#ja-newsmoo-wrap .ja-newsmoo span {
+	display: block;
+}
+
+#ja-newsmoo {
+}
+
+.ja-newsmoo img {
+	margin: 0 0 5px;
+	padding: 0;
+}
+
+.ja-newsmoo-title a {
+	padding: 5px;
+	font-weight: bold;
+	font-size: 100%;
+	text-decoration: none;
+}
+
+.ja-newsmoo-desc {
+	padding: 0 5px;
+}
+
+#ja-newsmoo-wrap a.readon {
+	margin: 5px 0 0 5px;
+}

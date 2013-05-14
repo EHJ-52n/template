@@ -31,7 +31,7 @@ if (!defined ('_JA_CSS_MENU_CLASS')) {
         }
         
         function beginMenuItem($row=null, $level = 0, $pos = '') {
-		echo "<!-- beginMenuItem(row: $row, level: $level, pos: $pos) -->\n";
+		// echo "<!-- beginMenuItem(row: $row, level: $level, pos: $pos) -->\n";
 		$active = in_array($row->id, $this->open);
             $active = ($active) ? " active" : "";
             if ($level == 1 && @$this->children[$row->id])

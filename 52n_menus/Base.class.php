@@ -15,8 +15,8 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		function JA_Base( &$params ){
 			global $Itemid;
 			$this->_params = $params;
-			// TODO Next line does not work at all: ItemId is always uninitialized!
-			$this->Itemid = $Itemid; 
+			$jinput = JFactory::getApplication()->input;
+			$this->Itemid = $jinput->getInt('Itemid');
 			$this->loadMenu();
 		}
 

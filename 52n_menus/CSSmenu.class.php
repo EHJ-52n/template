@@ -9,7 +9,7 @@ if (!defined ('_JA_CSS_MENU_CLASS')) {
 			echo "<!-- CSSmenu::beginMenu -->\n";
 		}
   
-  		function beginMenuItems($pid=1, $level=0){
+  		function beginMenuItems($pid=1, $level=1){
   			echo "<!-- beginMenuItems(); -->\n";
 			if($level==1)
 			{
@@ -31,14 +31,14 @@ if (!defined ('_JA_CSS_MENU_CLASS')) {
         }
         
         function beginMenuItem($row=null, $level = 0, $pos = '') {
-		echo "<!-- beginMenuItem(row: $row, level: $level, pos: $pos) -->";
+		echo "<!-- beginMenuItem(row: $row, level: $level, pos: $pos) -->\n";
 		$active = in_array($row->id, $this->open);
             $active = ($active) ? " active" : "";
-            if ($level == 0 && @$this->children[$row->id])
+            if ($level == 1 && @$this->children[$row->id])
             {
             	echo "<li class=\"havechild{$active}\">";
             }
-            else if ($level > 0 && @$this->children[$row->id])
+            else if ($level > 1 && @$this->children[$row->id])
             {
             	echo "<li class=\"havesubchild{$active}\">";
             }

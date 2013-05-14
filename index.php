@@ -85,7 +85,7 @@ $app = JFactory::getApplication();
 		-->
         <div id="ja-mainnavwrap">
             <div id="ja-mainnav">
-                <?php $jamenu->genMenu(0,1); ?>
+                <?php $jamenu->genMenu(1,1); ?>
                 <?php if ($this->countModules('user4')) { ?>
 					<div id="ja-search">
 						<jdoc:include type="modules" name="user4" style="raw" />

@@ -87,7 +87,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 					{
 						case 'separator' :  
 							// total break here?
-							return '<span class="separator">'.$menuElement->name.'</span>';
+							return '<span class="separator">'.$menuElement->title.'</span>';
 							break;
 						case 'url' :
 							if ((strpos($menuElement->link, 'index.php?') !== false) && (strpos($menuElement->link, 'Itemid=') === false))
@@ -184,7 +184,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 
 			if ($tmp->type == 'separator')
 			{
-				$data = '<a href="#" title=""><span class="separator">'.$tmp->name.'</span></a>';
+				$data = '<a href="#" title=""><span class="separator">'.$tmp->title.'</span></a>';
 				if (!$returnResult)
 				{
 					echo $data;
@@ -205,23 +205,23 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 			if ($this->getParam('menu_images') && $iParams->get('menu_image') && $iParams->get('menu_image') != -1) {
 				if ($this->getParam('menu_background')) {
 					$itembg = ' style="background-image:url(images/stories/'.$iParams->get('menu_image').');"';
-					$txt = '<span class="menu-title">' . $tmp->name . '</span>';
+					$txt = '<span class="menu-title">' . $tmp->title . '</span>';
 				} else {
-					$txt = '<img src="images/stories/'.$iParams->get('menu_image').'" alt="'.$tmp->name.'" title="'.$tmp->name.'" /><span class="menu-title">' . $tmp->name . '</span>';
+					$txt = '<img src="images/stories/'.$iParams->get('menu_image').'" alt="'.$tmp->title.'" title="'.$tmp->title.'" /><span class="menu-title">' . $tmp->title . '</span>';
 				}
 			} else {
-				$txt = '<span class="menu-title">' . $tmp->name . '</span>';
+				$txt = '<span class="menu-title">' . $tmp->title . '</span>';
 			}
 			//Add page title to item
 			if ($level == 1 && $this->getParam('menu_title')) {
 				if ($this->getPageTitle($iParams)) {
 					$txt .= '<span class="menu-desc">'. $this->getPageTitle($iParams).'</span>';
 				} else {
-					$txt .= '<span class="menu-desc">'. $tmp->name.'</span>';
+					$txt .= '<span class="menu-desc">'. $tmp->title.'</span>';
 				}
 			}
 
-			$title = "title=\"$tmp->name\"";
+			$title = "title=\"$tmp->title\"";
 
 			if ($tmp->url != null)
 			{

@@ -5,12 +5,11 @@ if (!defined ('_JA_CSS_MENU_CLASS')) {
 	require_once (dirname(__FILE__).DS."Base.class.php");
 	
 	class JA_CSSmenu extends JA_Base{
-		function beginMenu($startlevel=0, $endlevel = 10){
-			echo "<!-- CSSmenu::beginMenu -->\n";
-		}
+		// empty methods because there is not content required for CSSMenus
+		function beginMenu($startlevel=0, $endlevel = 10){}
+		function endMenu($startlevel=0, $endlevel = 10){}
   
   		function beginMenuItems($pid=1, $level=1){
-  			echo "<!-- beginMenuItems(); -->\n";
 			if($level==1)
 			{
 				echo "<ul id=\"ja-cssmenu\" class=\"clearfix\">\n";
@@ -19,11 +18,6 @@ if (!defined ('_JA_CSS_MENU_CLASS')) {
 			{
 				 echo "<ul>";
 			}
-		}
-      
-		// Warum ist das hier leer?
-		function endMenu($startlevel=0, $endlevel = 10){
-			echo "<!-- CSSMenu::endMenu -->\n";
 		}
         
         function hasSubMenu($level) {

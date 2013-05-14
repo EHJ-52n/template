@@ -301,14 +301,13 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 			return false;
 		}
 		function genMenu($startlevel=1, $endlevel = 10){
-			echo "<!-- Base.genMenu(startLevel: $startlevel, endLevel: $endlevel);-->\n";
 			$this->setParam('startlevel', $startlevel);
 			$this->setParam('endlevel', $endlevel);
 			$this->beginMenu($startlevel, $endlevel);
 
 			if ($this->getParam('startlevel') == 1) {
 				//First level
-				$this->genMenuItems (1, 1); // maybe change to 1,0?
+				$this->genMenuItems (1, 1);
 			}else{
 				//Sub level
 				$parentId = $this->getParentId($this->getParam('startlevel'));
@@ -328,7 +327,6 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		function genMenuItems($parentId, $level) {
 			// if the current parent has children
 			if (@$this->children[$parentId]) {
-				echo "<!-- if reached! -->\n";
 				$this->beginMenuItems($parentId, $level);
 				$i = 0;
 				foreach ($this->children[$parentId] as $row) {

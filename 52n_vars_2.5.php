@@ -69,7 +69,7 @@ $menuclass = "JA_$menu";
 $jamenu = new $menuclass ($japarams);
 
 $hasSubnav = false;
-if ($jamenu->hasSubMenu (1) && $jamenu->showSeparatedSub ) 
+if ($jamenu->hasSubMenu(1) && $jamenu->showSeparatedSub )
 {
 	$hasSubnav = true;
 }

@@ -21,43 +21,25 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		}
 
 		function createParameterObject($param, $path='', $type='menu') {
-			if(defined( '_JEXEC' ))
-			{ 
+			if(defined( '_JEXEC' )) { 
 				return new JParameter($param, $path);
-			}
-			else
-			{ 
+			} else { 
 				return new mosParameters($param, $path, $type);
 			}
 		}
 
-		function getPageTitle ($params) {
-			if(defined( '_JEXEC' )) 
-			{
+		function getPageTitle($params) {
+			if(defined( '_JEXEC' )) {
 				return $params->get ('page_title');
-			}
-			else
-			{
+			} else {
 				return $params->get ('header');
 			}
 		}
 
-		/*
-		 * Should: Function loads the whole menu structure from the database
-		 * 
-		 * State: 
-		 * 		- Complete Structure is returned (2013-04-29)
-		 * 		- Root level is not 0 (changed from 1.5 -> 2.5)
-		 * 
-		 * Open:
-		 * 		How to store?
-		 * 		How is the structure used?
-		 */
-	    function  loadMenu(){
+	    function loadMenu(){
 			$app = JFactory::getApplication(); // new
     	    $menu = &$app->getMenu();
-    	    if(strtolower(get_class($menu)) == 'jexception') 
-    	    {
+    	    if(strtolower(get_class($menu)) == 'jexception') {
     	    	$menu = @JMenu :: getInstance('site');
     	    	echo "<!--\n Exception thrown: Menu: $menu\n-->\n";
     	    }
@@ -73,8 +55,8 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
     	    $cacheIndex = array();
  		    $this->items = array();
  		    $highestUserGroup = $this->getHighestGroupLevel($user);
-   	    	foreach ($rows as $index => $menuElement)
-   	    	 {
+ 		    foreach ($rows as $index => $menuElement)
+ 		    {
    	    	 	// check if user is allowed to access the menu element?
     		    if ($menuElement->access <= $highestUserGroup)
     		    {
@@ -109,19 +91,19 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 					// Handle SSL links
 					$iParams = $this->createParameterObject($menuElement->params);
 					$iSecure = $iParams->def('secure', 0);
-					// reset the url of the homepage element
 					if ($menuElement->home == 1) 
 					{
+						// reset the url of the homepage element
 						$menuElement->url = JURI::base();
 					} 
-					// if the url of the menuElement starts with http AND the link doesn't start with index.php -> no internal link
 					elseif (strcasecmp(substr($menuElement->url, 0, 4), 'http') && (strpos($menuElement->link, 'index.php?') !== false))
 					{
+						// if the url of the menuElement starts with http AND the link doesn't start with index.php -> no internal link
 						$menuElement->url = JRoute::_($menuElement->url, true, $iSecure);
 					} 
-					// all other internal links are cleaned regarding "&"
 					else
 					{
+						// all other internal links are cleaned regarding "&"
 						$menuElement->url = str_replace('&', '&amp;', $menuElement->url);
 					}
 					// save the number of children or position in children array?
@@ -162,9 +144,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
             $this->open = $open;
 	    }
 	    
-	    //get highest group id from user's groups
-	    function getHighestGroupLevel($user)
-	    {
+	    function getHighestGroupLevel($user) {
 	    	$highestGroupLevel = -1;
 	    	foreach ($user->getAuthorisedGroups() as $groupLevel)
 	    	{
@@ -176,8 +156,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 	    	return $highestGroupLevel;
 	    }
 
-		function genMenuItem($item, $level = 1, $pos = '', $returnResult = 0)
-		{
+		function genMenuItem($item, $level = 1, $pos = '', $returnResult = 0) {
 			$data = null;
 			$tmp = $item;
 
@@ -187,9 +166,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 				if (!$returnResult)
 				{
 					echo $data;
-				}
-				else 
-				{
+				} else {
 					return $data;
 				} 
 			}
@@ -200,8 +177,9 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 			$id='id="menu' . $tmp->id . '"';
 			$iParams = $this->createParameterObject( $item->params );
 			$itembg = '';
-			if ($this->getParam('menu_images') && $iParams->get('menu_image') && $iParams->get('menu_image') != -1) {
-				if ($this->getParam('menu_background')) {
+			if ($this->getParam('menu_images') && $iParams->get('menu_image') && $iParams->get('menu_image') != -1)
+			{
+				if ($this->getParam('menu_background')) { 
 					$itembg = ' style="background-image:url(images/stories/'.$iParams->get('menu_image').');"';
 					$txt = '<span class="menu-title">' . $tmp->title . '</span>';
 				} else {
@@ -259,16 +237,14 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		}
 
 		function beginMenu($startlevel=1, $endlevel = 10){
-			echo "<!-- Base.beginMenu(); -->\n";
 			echo "<div>";
 		}
+		
 		function endMenu($startlevel=1, $endlevel = 10){
-			echo "<!-- Base.endMenu(); -->\n";
 			echo "</div>";
 		}
 
 		function beginMenuItems($parentId=1, $level=1){
-			echo "<!-- Base.beginMenuItems(); -->\n";
 			echo "<ul>";
 		}
 
@@ -279,6 +255,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		function beginMenuItem($mitem=null, $level = 1, $pos = ''){
 			echo "<li>";
 		}
+		
 		function endMenuItem($mitem=null, $level = 1, $pos = ''){
 			echo "</li>";
 		}
@@ -290,14 +267,16 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		}
 
 		function hasSubMenu($level) {
-			$parentId = $this->getParentId ($level);
+			$parentId = $this->getParentId($level);
 			if (!$parentId) return false;
 			return $this->hasSubItems ($parentId);
 		}
+		
 		function hasSubItems($id){
 			if (@$this->children[$id]) return true;
 			return false;
 		}
+		
 		function genMenu($startlevel=1, $endlevel = 10){
 			$this->setParam('startlevel', $startlevel);
 			$this->setParam('endlevel', $endlevel);
@@ -334,7 +313,9 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 					$this->genMenuItem( $row, $level, $pos);
 
 					// show menu with menu expanded - submenus visible
-					if ($level < $this->getParam('endlevel')) $this->genMenuItems( $row->id, $level+1 );
+					if ($level < $this->getParam('endlevel')){
+						$this->genMenuItems( $row->id, $level+1 );
+					}
 					$i++;
 
 					if ($level == 1 && $pos == 'last' && in_array($row->id, $this->open)) {
@@ -358,19 +339,21 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 			if ($level == 1 || (count($this->open) < $level))
 			{	
 				return 1;
+			} else {
+				return $this->open[count($this->open)-$level];
 			}
-			return $this->open[count($this->open)-$level];
 		}
 
 		function getParentText ($level) {
 			$parentId = $this->getParentId ($level);
 			if ($parentId) {
 				return $this->items[$parentId]->name;
-			}else return "";
+			} else {
+				return "";
+			}
 		}
 
-		function genMenuHead () {
-		}
+		function genMenuHead () {}
 	}
 }
 ?>

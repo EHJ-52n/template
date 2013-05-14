@@ -148,9 +148,9 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
     		    if (isset($cacheIndex[$id]))
     		    {
     			    $index = $cacheIndex[$id];
-    			    if (isset ($rows[$index]) && $rows[$index]->parent > 0)
+    			    if (isset ($rows[$index]) && $rows[$index]->parent_id > 1)
     			    {
-    				    $id = $rows[$index]->parent;
+    				    $id = $rows[$index]->parent_id;
     				    $open[] = $id;
     			    }
     			    else

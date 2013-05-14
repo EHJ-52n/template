@@ -5,7 +5,7 @@ if (!defined ('_JA_CSS_MENU_CLASS')) {
 	require_once (dirname(__FILE__).DS."Base.class.php");
 	
 	class JA_CSSmenu extends JA_Base{
-		// empty methods because there is not content required for CSSMenus
+		// empty methods because there is no content required for CSSMenus
 		function beginMenu($startlevel=0, $endlevel = 10){}
 		function endMenu($startlevel=0, $endlevel = 10){}
   

@@ -7,4 +7,4 @@ about the license, maybe something like GPLv2.0 but needs to be clarified.
 * Clarify license
 * Test footer content
 * Search bar not visible
-
+* Sync this with https://wiki.52north.org/bin/view/IT/JoomlaMigration15To25

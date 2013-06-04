@@ -5,11 +5,11 @@
 	<creationDate>April 2012</creationDate>
 	<author>Eike Hinderk Juerrens</author>
 	<copyright>Copyright (C) 2012 52North. All rights reserved.</copyright>
-    <authorEmail>e.h.juerrens@52north.org</authorEmail>
+	<authorEmail>e.h.juerrens@52north.org</authorEmail>
 	<authorUrl>http://52north.org/52-north-team/eike-hinderk-juerrens</authorUrl>
 	<version>2.5.0</version>
-    <description>TPL_52N-2012_XML_DESCRIPTION</description>
-	
+	<description>TPL_52N-2012_XML_DESCRIPTION</description>
+
 	<files>
 		<folder>css</folder>
 		<folder>languages</folder>
@@ -133,12 +133,12 @@
 		<filename>template_thumbnail.png</filename>
 		<filename>templateDetails.xml</filename>
 	</files>
-	
+
 	<languages folder="languages">
 		<language tag="en-GB">en-GB/en-GB.tpl_52n-2012.ini</language>
 		<language tag="en-GB">en-GB/en-GB.tpl_52n-2012.sys.ini</language>
 	</languages>
-	
+
 	<positions>
 		<position>hornav</position>
 		<position>breadcrumbs</position>

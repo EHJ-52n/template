@@ -159,103 +159,100 @@
 		<position>syndicate</position>
 		<position>debug</position>
 	</positions>
-	
+
 	<config>
 		<fields name="params">
-			<field
-					name="ja_font"
-					type="list"
-					default="3"
-					label="Font size"
-					description="FONT SIZE DESCRIPTION">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-			</field>
-			<field
-					name="52n_font"
-					type="list"
-					default="3"
-					label="Font size"
-					description="FONT SIZE DESCRIPTION">
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-			</field>
-			<field
-					name="showComponent"
-					type="radio"
-					default="1"
-					label="Show Component"
-					description="SHOW COMPONENT DESCRIPTION">
-				<option value="0">No</option>
-				<option value="1">Yes</option>
-			</field>
-			<field
-					name="logoType"
-					type="list"
-					default="image"
-					label="Logo type"
-					description="How to display the logo">
-				<option value="image">Image</option>
-				<option value="text">Text</option>
-			</field>
-			<field
-					name="logoText"
-					type="list"
-					default="52°North"
-					label="Logo Text"
-					description="What text to display next to logo">
-				<option value="52°North">52°North</option>
-				<option value="52N">52N</option>
-			</field>
-			<field
-					name="sloganText"
-					type="list"
-					default="exploring horizons"
-					label="Slogan Text"
-					description="What text to display next to company name">
-				<option value="exploring horizons">exploring horizons</option>
-			</field>
-			<field
-					name="ja_screen"
-					type="list"
-					default="wide"
-					label="ja_screen"
-					description="ja_screen parameter">
-				<option value="wide">wide</option>
-			</field>
-			<field
-					name="ja_color"
-					type="list"
-					default="default"
-					label="ja_color"
-					description="ja_color parameter">
-				<option value="default">default</option>
-			</field>
-			<field
-					name="menutype"
-					type="list"
-					default="mainmenu"
-					label="menutype"
-					description="menutype parameter">
-				<option value="mainmenu">mainmenu</option>
-			</field>		
-			<field
-					name="ja_menu"
-					type="list"
-					default="css"
-					label="ja_menu"
-					description="ja_menu parameter">
-				<option value="css">css</option>
-			</field>
+			<fieldset name="advanced">
+				<field name="ja_font"
+						type="list"
+						default="3"
+						label="TPL_52N-2012_FIELD_JA_FONT_LABEL"
+						description="TPL_52N-2012_FIELD_JA_FONT_DESC"
+						filter="int">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="52n_font"
+						type="list"
+						default="3"
+						label="TPL_52N-2012_FIELD_52N_FONT_LABEL"
+						description="TPL_52N-2012_FIELD_52N_FONT_DESC"
+						filter="int">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+				</field>
+				<field name="showComponent"
+						type="radio"
+						default="1"
+						label="TPL_52N-2012_FIELD_SHOW_COMPONENT_LABEL"
+						description="TPL_52N-2012_FIELD_SHOW_COMPONENT_DESC"
+						filter="int">
+					<option value="0">No</option>
+					<option value="1">Yes</option>
+				</field>
+				<field name="logoType"
+						type="list"
+						default="image"
+						label="TPL_52N-2012_FIELD_LOGO_TYPE_LABEL"
+						description="TPL_52N-2012_FIELD_LOGO_TYPE_DESC"
+						filter="word">
+					<option value="image">Image</option>
+					<option value="text">Text</option>
+				</field>
+				<field name="logoText"
+						type="text"
+						default="52°North"
+						label="TPL_52N-2012_FIELD_LOGO_TEXT_LABEL"
+						description="TPL_52N-2012_FIELD_LOGO_TEXT_DESC"
+						filter="string" />
+				<field name="sloganText"
+						type="text"
+						default="exploring horizons"
+						label="TPL_52N-2012_FIELD_SLOGAN_TEXT_LABEL"
+						description="TPL_52N-2012_FIELD_SLOGAN_TEXT_DESC"
+						filter="string" />
+				<field name="ja_screen"
+						type="list"
+						default="wide"
+						label="TPL_52N-2012_FIELD_JA_SCREEN_LABEL"
+						description="TPL_52N-2012_FIELD_JA_SCREEN_DESC"
+						filter="word">
+					<option value="wide">wide</option>
+				</field>
+				<field name="ja_color"
+						type="list"
+						default="default"
+						label="TPL_52N-2012_FIELD_JA_COLOR_LABEL"
+						description="TPL_52N-2012_FIELD_JA_COLOR_DESC"
+						filter="word">
+					<option value="default">default</option>
+				</field>
+				<field name="menutype"
+						type="list"
+						default="mainmenu"
+						label="TPL_52N-2012_FIELD_MENUTYPE_LABEL"
+						description="TPL_52N-2012_FIELD_MENUTYPE_DESC"
+						filter="word">
+					<option value="mainmenu">mainmenu</option>
+				</field>
+				<field name="ja_menu"
+						type="list"
+						default="css"
+						label="TPL_52N-2012_FIELD_JA_MENU_LABEL"
+						description="TPL_52N-2012_FIELD_JA_MENU_DESC"
+						filter="word">
+					<option value="css">css</option>
+				</field>
+			</fieldset>
 		</fields>
 	</config>
-	
+
 </extension>

@@ -39,7 +39,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 		}
 
 	    function loadMenu(){
-			$app = JFactory::getApplication(); // new
+			$app = JFactory::getApplication();
     	    $menu = &$app->getMenu();
     	    if(strtolower(get_class($menu)) == 'jexception') {
     	    	$menu = @JMenu :: getInstance('site');

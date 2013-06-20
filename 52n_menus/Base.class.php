@@ -3,6 +3,8 @@ defined( '_VALID_MOS' ) or defined('_JEXEC') or die;
 
 if (!defined ('_JA_BASE_MENU_CLASS')) {
 	define ('_JA_BASE_MENU_CLASS', 1);
+	
+	jimport( 'joomla.html.parameter' );
 
 	class JA_Base{
 		var $_params = null;

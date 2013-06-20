@@ -123,7 +123,7 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
     	    // second pass - collect 'open' menus
     	    // starting with the currently selected item stored in $this->Itemid
     	    $open = array ($this->Itemid);
-    	    $count = 20; // maximum levels - to prevent runaway loop
+    	    $count = 200; // maximum levels - to prevent runaway loop
     	    $id = $this->Itemid;
 
     	    while (-- $count) // if $count == 0 than the loop is ended

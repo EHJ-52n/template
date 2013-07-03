@@ -1422,6 +1422,7 @@ dl.search-results dd.result-url {}
         margin-bottom: 5px;
         width: 100%;
 }
+
 .modal {
     text-align: left;
 }
@@ -1432,3 +1433,9 @@ dl.search-results dd.result-url {}
 	margin: 5px;
 }
 
+/* required by Contacts List (added by eike@2013-07-03) */
+
+.item-position {
+    font-size: 80%;
+	font-weight: normal;
+}

@@ -12,7 +12,7 @@
 // no direct access
 defined( '_JEXEC' ) or die;
 
-include_once (dirname(__FILE__).DS.'/52n_templatetools_2.5.php');
+include_once (dirname(__FILE__).'/52n_templatetools_2.5.php');
 //$mainframe =& JFactory::getApplication('site');
 $app = JFactory::getApplication();
 
@@ -43,7 +43,7 @@ else
 
 //Main navigation
 $ja_menutype = $tmpTools->getParam(JA_TOOL_MENU);
-include_once( dirname(__FILE__).DS.'52n_menus/Base.class.php' );
+include_once( dirname(__FILE__).'/52n_menus/Base.class.php' );
 $japarams = JA_Base::createParameterObject('');
 $japarams->set( 'menutype', $tmpTools->getParam('menutype', 'mainmenu') );
 $japarams->set( 'menu_images_align', 'left' );
@@ -52,17 +52,17 @@ $japarams->set('menu_title', 0);
 switch ($ja_menutype) {
 	case 'css':
 		$menu = "CSSmenu";
-		include_once( dirname(__FILE__).DS.'52n_menus/'.$menu.'.class.php' );
+		include_once( dirname(__FILE__).'/52n_menus/'.$menu.'.class.php' );
 		break;
 	case 'moo':
 		$menu = "Moomenu";
-		include_once( dirname(__FILE__).DS.'52n_menus/'.$menu.'.class.php' );
+		include_once( dirname(__FILE__).'/52n_menus/'.$menu.'.class.php' );
 		break;
 	case 'split':
 	default:
     $japarams->set('menu_title', 0);
 		$menu = "CSSmenu";
-		include_once( dirname(__FILE__).DS.'52n_menus/'.$menu.'.class.php' );
+		include_once( dirname(__FILE__).'/52n_menus/'.$menu.'.class.php' );
 		break;
 }
 $menuclass = "JA_$menu";

@@ -2,7 +2,7 @@
 defined( '_VALID_MOS' ) or defined('_JEXEC') or die;
 if (!defined ('_JA_CSS_MENU_CLASS')) {
 	define ('_JA_CSS_MENU_CLASS', 1);
-	require_once (dirname(__FILE__).DS."Base.class.php");
+	require_once (dirname(__FILE__)."/Base.class.php");
 	
 	class JA_CSSmenu extends JA_Base{
 		

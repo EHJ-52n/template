@@ -48,7 +48,7 @@ include_once( dirname(__FILE__).'/52n_menus/Base.class.php' );
 $japarams = JRegistry::getInstance('templateParams');
 $japarams->set( 'menutype', $tmpTools->getParam('menutype', 'mainmenu') );
 $japarams->set( 'menu_images_align', 'left' );
-$japarams->set( 'menupath', $tmpTools->templateurl() .'/52n_menus');
+$japarams->set( 'menupath', $this->baseurl . "/templates/" . $this->template .'/52n_menus');
 $japarams->set('menu_title', 0);
 switch ($ja_menutype) {
 	case 'css':

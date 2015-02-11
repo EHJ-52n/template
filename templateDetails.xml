@@ -43,17 +43,14 @@
 		<position>left</position>
 		<position>right</position>
 		<position>top</position>
-		<position>user1</position>
-		<position>user2</position>
-		<position>user3</position>
-		<position>user4</position>
-		<position>user5</position>
-		<position>user6</position>
-		<position>user7</position>
-		<position>user8</position>
-		<position>user9</position>
+		<position>footer-communities</position>
+		<position>footer-get-involved</position>
+		<position>footer-additional</position>
+		<position>search</position>
+		<position>top-spotlight</position>
+		<position>footer-affiliations</position>
+		<position>footer-partners</position>
 		<position>footer</position>
-		<position>syndicate</position>
 		<position>debug</position>
 	</positions>
 

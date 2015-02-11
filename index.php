@@ -102,10 +102,10 @@ $app = JFactory::getApplication();
                 	// the first parameter defines the root element (since j2.5 it's 1, before 0)
                 	// the second parameter defines the maximum level to generate menus (CSS menu supports up to 3)
                 	$jamenu->genMenu(1,3);
-                	if ($this->countModules('user4')) { 
+                	if ($this->countModules('search')) { 
 				?>
 					<div id="ja-search">
-						<jdoc:include type="modules" name="user4" style="raw" />
+						<jdoc:include type="modules" name="search" style="raw" />
 					</div>
                 <?php } ?>
             </div>
@@ -152,12 +152,12 @@ $app = JFactory::getApplication();
 				</div>
 				<!-- END: PATHWAY -->
                 <div id="ja-mainbody" class="clearfix">
-                    <?php if ($this->countModules('user5') && $ja_right) { ?>
+                    <?php if ($this->countModules('top-spotlight') && $ja_right) { ?>
 						<!--
 							BEGIN:  TOPSPOTLIGHT
 						-->
 						<div id="ja-topsl">
-							<jdoc:include type="modules" name="user5" style="raw" />
+							<jdoc:include type="modules" name="top-spotlight" style="raw" />
 						</div>
 						<!-- END: TOPSPOTLIGHT -->
                     <?php } ?>
@@ -215,7 +215,7 @@ $app = JFactory::getApplication();
 		</div>
 		<!-- END: ja-containerwrap$divid -->
         <?php
-        $spotlight = array ('user1','user2', 'user6','user7');
+        $spotlight = array ('footer-communities','footer-get-involved', 'footer-affiliations','footer-partners');
         $botsl = $tmpTools->calSpotlight ($spotlight,$tmpTools->isOP()?100:99.9);
         if( $botsl ) { ?>
 			<!--
@@ -224,24 +224,24 @@ $app = JFactory::getApplication();
 			<div id="ja-botslwrap">
 				<div style="margin: 0 auto; width: 920px;">
 					<div id="ja-botsl" class="clearfix">
-						<?php if( $this->countModules('user1') ) {?>
-							<div class="ja-box<?php echo $botsl['user1']['class']; ?>" style="width: <?php echo $botsl['user1']['width']; ?>;">
-								<jdoc:include type="modules" name="user1" style="xhtml" />
+						<?php if( $this->countModules('footer-communities') ) {?>
+							<div class="ja-box<?php echo $botsl['footer-communities']['class']; ?>" style="width: <?php echo $botsl['footer-communities']['width']; ?>;">
+								<jdoc:include type="modules" name="footer-communities" style="xhtml" />
 							</div>
 								<?php } 
-								if( $this->countModules('user2') ) {?>
-							<div class="ja-box<?php echo $botsl['user2']['class']; ?>" style="width: <?php echo $botsl['user2']['width']; ?>;">
-								<jdoc:include type="modules" name="user2" style="xhtml" />
+								if( $this->countModules('footer-get-involved') ) {?>
+							<div class="ja-box<?php echo $botsl['footer-get-involved']['class']; ?>" style="width: <?php echo $botsl['footer-get-involved']['width']; ?>;">
+								<jdoc:include type="modules" name="footer-get-involved" style="xhtml" />
 							</div>
 								<?php }
-								if( $this->countModules('user6') ) {?>
-							<div class="ja-box<?php echo $botsl['user6']['class']; ?>" style="width: <?php echo $botsl['user6']['width']; ?>;">
-								<jdoc:include type="modules" name="user6" style="xhtml" />
+								if( $this->countModules('footer-affiliations') ) {?>
+							<div class="ja-box<?php echo $botsl['footer-affiliations']['class']; ?>" style="width: <?php echo $botsl['footer-affiliations']['width']; ?>;">
+								<jdoc:include type="modules" name="footer-affiliations" style="xhtml" />
 							</div>
 								<?php }
-								if( $this->countModules('user7') ) {?>
-							<div class="ja-box<?php echo $botsl['user7']['class']; ?>" style="width: <?php echo $botsl['user7']['width']; ?>;">
-								<jdoc:include type="modules" name="user7" style="xhtml" />
+								if( $this->countModules('footer-partners') ) {?>
+							<div class="ja-box<?php echo $botsl['footer-partners']['class']; ?>" style="width: <?php echo $botsl['footer-partners']['width']; ?>;">
+								<jdoc:include type="modules" name="footer-partners" style="xhtml" />
 							</div>
 						<?php } ?>
 					</div>
@@ -255,7 +255,7 @@ $app = JFactory::getApplication();
         <div id="ja-footerwrap">
 			<div style="margin: 0 auto; width: 920px;">
 				<div id="ja-footer" class="clearfix">
-					<jdoc:include type="modules" name="user3" />
+					<jdoc:include type="modules" name="footer-additional" />
 					<jdoc:include type="modules" name="footer" />
 				</div>
 			</div>

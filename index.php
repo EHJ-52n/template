@@ -1,4 +1,12 @@
-<?php  
+<?php
+/**
+ * @package 	org.n52.Joomla.Site
+ * @subpackage 	Template.52n-2012
+ * @copyright	Copyright (C) 2012 - 2015 52°North. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+// No direct access.
 defined( '_JEXEC' ) or die; 
 
 /* The following line loads some additional helpers */

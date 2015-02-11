@@ -10,10 +10,12 @@
 defined( '_JEXEC' ) or die; 
 
 /* The following line loads some additional helpers */
-include_once (dirname(__FILE__).DS.'52n_vars_2.5.php');
+include_once (dirname(__FILE__).'/52n_vars_2.5.php');
 
 JHTML::_('behavior.framework', true);
+
 $app = JFactory::getApplication();
+
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>" >

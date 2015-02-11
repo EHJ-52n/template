@@ -120,7 +120,7 @@ $app = JFactory::getApplication();
                 $siteName = $tmpTools->sitename();
                 if ($tmpTools->getParam('logoType')=='image') { ?>
                 <h1 class="logo-image">
-                    <a href="index.php" title="<?php echo $siteName; ?>"><span><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/52n-logo.gif" border="0" /></span></a>
+                    <a href="/" title="<?php echo $siteName; ?>"><span><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/52n-logo.gif" border="0" /></span></a>
                 </h1>
                 <?php } else {
                     $logoText = (trim($tmpTools->getParam('logoText'))=='') ? $config->sitename : $tmpTools->getParam('logoText');

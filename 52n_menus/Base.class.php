@@ -24,9 +24,9 @@ if (!defined ('_JA_BASE_MENU_CLASS')) {
 
 		function createParameterObject($param, $path='', $type='menu') {
 			if(defined( '_JEXEC' )) { 
-				$jparams = new JRegistry();
-				return $jparams->get($param);
-// 				return new JParameter($param, $path);
+				$jparams = JRegistry::getInstance('parameter-'. $path);
+				$jparams->set($path,$param);
+				return $jparams;
 			} else { 
 				return new mosParameters($param, $path, $type);
 			}

@@ -44,7 +44,8 @@ else
 //Main navigation
 $ja_menutype = $tmpTools->getParam(JA_TOOL_MENU);
 include_once( dirname(__FILE__).'/52n_menus/Base.class.php' );
-$japarams = JA_Base::createParameterObject('');
+// $japarams = JA_Base::createParameterObject('');
+$japarams = JRegistry::getInstance('templateParams');
 $japarams->set( 'menutype', $tmpTools->getParam('menutype', 'mainmenu') );
 $japarams->set( 'menu_images_align', 'left' );
 $japarams->set( 'menupath', $tmpTools->templateurl() .'/52n_menus');

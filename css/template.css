@@ -1445,3 +1445,8 @@ dl.search-results dd.result-url {}
 	font-size: 80%;
 	font-weight: normal;
 }
+
+/* Feed Links get H5 instead H4 in Joomla 3 => hence we increase the font size */
+h5.feed-link {
+	font-size: 110%;
+}

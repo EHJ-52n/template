@@ -18,13 +18,16 @@ $app = JFactory::getApplication();
 	<!--
 		BEGIN: CSS
 	-->
-    <script language="javascript" type="text/javascript" src="<?php echo $tmpTools->templateurl(); ?>/js/52n.script.js"></script>
-    <link rel="stylesheet" href="<?php echo $tmpTools->baseurl(); ?>templates/system/css/system.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo $tmpTools->baseurl(); ?>templates/system/css/general.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo $tmpTools->templateurl(); ?>/css/template.css" type="text/css" />
-	<link rel="stylesheet" href="<?php echo $tmpTools->templateurl(); ?>/css/typo.css" type="text/css" />
-    <link rel="stylesheet" href="<?php echo $tmpTools->templateurl(); ?>/css/52n_newsmoo.css" type="text/css" />
-	<link rel="stylesheet" href="<?php echo $tmpTools->templateurl(); ?>/css/colors/<?php echo $tmpTools->getParam(JA_TOOL_COLOR); ?>.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/system/css/system.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>templates/system/css/general.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/template.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/typo.css" type="text/css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/52n_newsmoo.css" type="text/css" />
+	<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/colors/<?php echo $tmpTools->getParam(JA_TOOL_COLOR); ?>.css" type="text/css" />
+	<!--
+		END: CSS
+	-->
+    <script language="javascript" type="text/javascript" src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/js/52n.script.js"></script>
     <!-- 
 		BEGIN: MENU_HEAD
 	-->
@@ -49,10 +52,10 @@ $app = JFactory::getApplication();
 	<!-- if(IE6) CSS from template tools for IE6 -->
 	<?php if ($tmpTools->isIE6()) { ?>
 		<!--[if lte IE 6]>
-		<link href="<?php echo $tmpTools->templateurl(); ?>/css/ie6.php" rel="stylesheet" type="text/css" />
-		<link href="<?php echo $tmpTools->templateurl(); ?>/css/colors/<?php echo $tmpTools->getParam(JA_TOOL_COLOR); ?>-ie6.php" rel="stylesheet" type="text/css" />
+		<link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/ie6.php" rel="stylesheet" type="text/css" />
+		<link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/css/colors/<?php echo $tmpTools->getParam(JA_TOOL_COLOR); ?>-ie6.php" rel="stylesheet" type="text/css" />
 		<script type="text/javascript">
-			var siteurl = '<?php echo $tmpTools->baseurl();?>';
+			var siteurl = '<?php echo $this->baseurl?>';
 			window.addEvent ('load', makeTransBG);
 			function makeTransBG() {
 				makeTransBg($$('img'));
@@ -76,7 +79,7 @@ $app = JFactory::getApplication();
         <li><a href="<?php echo $tmpTools->getCurrentURL();?>#ja-col1" title="<?php echo JText::_("Skip to 1st column");?>"><?php echo JText::_("Skip to 1st column");?></a></li>
         <li><a href="<?php echo $tmpTools->getCurrentURL();?>#ja-col2" title="<?php echo JText::_("Skip to 2nd column");?>"><?php echo JText::_("Skip to 2nd column");?></a></li>
     </ul>
-    <div style="height:90px; background: url('<?php echo $tmpTools->templateurl(); ?>/images/bg.png') 50% 50% no-repeat;">
+    <div style="height:90px; background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bg.png') 50% 50% no-repeat;">
         <jdoc:include type="modules" name="vitrine" />
     </div>
     <div id="ja-wrapper">
@@ -107,14 +110,14 @@ $app = JFactory::getApplication();
                 $siteName = $tmpTools->sitename();
                 if ($tmpTools->getParam('logoType')=='image') { ?>
                 <h1 class="logo-image">
-                    <a href="index.php" title="<?php echo $siteName; ?>"><span><img src="<?php echo $tmpTools->templateurl(); ?>/images/52n-logo.gif" border="0" /></span></a>
+                    <a href="index.php" title="<?php echo $siteName; ?>"><span><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/52n-logo.gif" border="0" /></span></a>
                 </h1>
                 <?php } else {
                     $logoText = (trim($tmpTools->getParam('logoText'))=='') ? $config->sitename : $tmpTools->getParam('logoText');
                     $sloganText = (trim($tmpTools->getParam('sloganText'))=='') ? JText::_('SITE SLOGAN') : $tmpTools->getParam('sloganText');	?>
 				<!-- next line changed from logo-text to logo-image during upgrade -->	
                 <h1 class="logo-image">
-                    <a href="index.php" title="<?php echo $siteName; ?>"><span><img src="<?php echo $tmpTools->templateurl(); ?>/images/52n-logo.gif" border="0" /></span></a>
+                    <a href="index.php" title="<?php echo $siteName; ?>"><span><img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/52n-logo.gif" border="0" /></span></a>
                 </h1>
                 <?php } ?>
                 <?php if ($this->countModules('top')) { ?>

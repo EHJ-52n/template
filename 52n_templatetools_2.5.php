@@ -189,14 +189,6 @@ class JA_Tools {
 	echo ' style="background: none;"';
 	}
 
-	function baseurl(){
-		return JURI::base();
-	}
-
-	function templateurl(){
-		return JURI::base()."templates/".$this->template;
-	}
-
 	function getRandomImage ($img_folder) {
 		$imglist=array();
 

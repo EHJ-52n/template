@@ -1,126 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
-<extension version="2.5" type="template" client="site">
+<extension version="3.1" type="template" client="site">
 	<name>52n-2012</name>
-	<creationDate>April 2012</creationDate>
+	<creationDate>February 2015</creationDate>
 	<author>Eike Hinderk Juerrens</author>
-	<copyright>Copyright (C) 2012 52North. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2012 - 2015 52North. All rights reserved.</copyright>
 	<authorEmail>e.h.juerrens@52north.org</authorEmail>
 	<authorUrl>http://52north.org/52-north-team/eike-hinderk-juerrens</authorUrl>
-	<version>2.5.0</version>
+	<version>3.0.0</version>
 	<description>TPL_52N-2012_XML_DESCRIPTION</description>
 
 	<files>
+		<folder>52n_menus</folder>
 		<folder>css</folder>
-		<folder>languages</folder>
 		<folder>fonts</folder>
-		<filename>52n_menus/Base.class.php</filename>
-		<filename>52n_menus/CSSmenu.class.php</filename>
-		<filename>52n_menus/52n_cssmenu/52n.cssmenu.css</filename>
-		<filename>52n_menus/52n_cssmenu/52n.cssmenu.js</filename>
-		<filename>52n_menus/52n_cssmenu/52n.moomenu.js</filename>
-		<filename>52n_menus/52n_cssmenu/index.html</filename>
-		<filename>52n_menus/52n_cssmenu/img/index.html</filename>
-		<filename>html/pagination.php</filename>
-		<filename>html/mod_banners/default.php</filename>
-		<filename>html/mod_banners/index.html</filename>
-		<filename>html/mod_login/default.php</filename>
-		<filename>html/mod_login/index.html</filename>
-		<filename>html/index.html</filename>
-		<filename>html/mod_footer/default.php</filename>
-		<filename>html/mod_footer/index.html</filename>
-		<filename>html/modules.php</filename>
-		<filename>images/52n-logo.gif</filename>
-		<filename>images/52n-logo_old.gif</filename>
-		<filename>images/arrow.png</filename>
-		<filename>images/arrow3.png</filename>
-		<filename>images/arrow4.gif</filename>
-		<filename>images/bd-deco.gif</filename>
-		<filename>images/bg.png</filename>
-		<filename>images/blank.png</filename>
-		<filename>images/box-bl.gif</filename>
-		<filename>images/box-bl.png</filename>
-		<filename>images/box-br.gif</filename>
-		<filename>images/box-hilite-bl.gif</filename>
-		<filename>images/box-hilite-br.gif</filename>
-		<filename>images/box-hilite-tl.gif</filename>
-		<filename>images/box-hilite-tr.gif</filename>
-		<filename>images/box-tl.gif</filename>
-		<filename>images/box-tl.png</filename>
-		<filename>images/box-tr.gif</filename>
-		<filename>images/box-tr.png</filename>
-		<filename>images/bub1-bl.gif</filename>
-		<filename>images/bub1-br.gif</filename>
-		<filename>images/bub1-tl.gif</filename>
-		<filename>images/bub1-tr.gif</filename>
-		<filename>images/bub2-bl.gif</filename>
-		<filename>images/bub2-br.gif</filename>
-		<filename>images/bub2-tl.gif</filename>
-		<filename>images/bub2-tr.gif</filename>
-		<filename>images/bub3-bl.gif</filename>
-		<filename>images/bub3-br.gif</filename>
-		<filename>images/bub3-tl.gif</filename>
-		<filename>images/bub3-tr.gif</filename>
-		<filename>images/bub4-bl.gif</filename>
-		<filename>images/bub4-br.gif</filename>
-		<filename>images/bub4-tl.gif</filename>
-		<filename>images/bub4-tr.gif</filename>
-		<filename>images/bullet.gif</filename>
-		<filename>images/but-bg.gif</filename>
-		<filename>images/col-bot.gif</filename>
-		<filename>images/col-center.gif</filename>
-		<filename>images/col-top.gif</filename>
-		<filename>images/dot.gif</filename>
-		<filename>images/download-bg.gif</filename>
-		<filename>images/emailbutton.png</filename>
-		<filename>images/grad1.gif</filename>
-		<filename>images/grad2.gif</filename>
-		<filename>images/h3-bg-hilite.gif</filename>
-		<filename>images/h3-bg-light.gif</filename>
-		<filename>images/h3-bg.gif</filename>
-		<filename>images/header-mask.png</filename>
-		<filename>images/hline.gif</filename>
-		<filename>images/icon-arrow.gif</filename>
-		<filename>images/icon-author.gif</filename>
-		<filename>images/icon-checklist.gif</filename>
-		<filename>images/icon-error.gif</filename>
-		<filename>images/icon-help.gif</filename>
-		<filename>images/icon-info.gif</filename>
-		<filename>images/icon-key.gif</filename>
-		<filename>images/icon-pages.gif</filename>
-		<filename>images/icon-plus.gif</filename>
-		<filename>images/icon-search.gif</filename>
-		<filename>images/icon-star.gif</filename>
-		<filename>images/icon-tips.gif</filename>
-		<filename>images/icon-user.gif</filename>
-		<filename>images/icons_license.txt</filename>
-		<filename>images/indent1.png</filename>
-		<filename>images/indent2.png</filename>
-		<filename>images/indent3.png</filename>
-		<filename>images/indent4.png</filename>
-		<filename>images/index.html</filename>
-		<filename>images/login-bg.gif</filename>
-		<filename>images/logo.gif</filename>
-		<filename>images/mainnav-active.gif</filename>
-		<filename>images/mainnav-bg.gif</filename>
-		<filename>images/mainnav-hover.gif</filename>
-		<filename>images/mainnav-sep.gif</filename>
-		<filename>images/ol-bg.gif</filename>
-		<filename>images/opaque.png</filename>
-		<filename>images/pathway-bg.gif</filename>
-		<filename>images/pdf_button.png</filename>
-		<filename>images/printbutton.png</filename>
-		<filename>images/sc-q.gif</filename>
-		<filename>images/search-bg.gif</filename>
-		<filename>images/sep.gif</filename>
-		<filename>images/shadow.gif</filename>
-		<filename>images/so-q.gif</filename>
-		<filename>images/spacer.png</filename>
-		<filename>images/sticky-bg.gif</filename>
-		<filename>images/trans-bg.png</filename>
-		<filename>images/vline.gif</filename>
-		<filename>images/wrapper-bg.gif</filename>
-		<filename>js/52n.script.js</filename>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>languages</folder>
 		<filename>52n_templatetools_2.5.php</filename>
 		<filename>52n_vars_2.5.php</filename>
 		<filename>component.php</filename>
@@ -129,9 +26,9 @@
 		<filename>index.html</filename>
 		<filename>index.php</filename>
 		<filename>offline.php</filename>
+		<filename>templateDetails.xml</filename>
 		<filename>template_preview.png</filename>
 		<filename>template_thumbnail.png</filename>
-		<filename>templateDetails.xml</filename>
 	</files>
 
 	<languages folder="languages">
@@ -164,6 +61,7 @@
 		<fields name="params">
 			<fieldset name="advanced">
 				<field name="ja_font"
+						class=""
 						type="list"
 						default="3"
 						label="TPL_52N-2012_FIELD_JA_FONT_LABEL"
@@ -177,6 +75,7 @@
 					<option value="6">6</option>
 				</field>
 				<field name="52n_font"
+						class=""
 						type="list"
 						default="3"
 						label="TPL_52N-2012_FIELD_52N_FONT_LABEL"
@@ -191,6 +90,7 @@
 				</field>
 				<field name="showComponent"
 						type="radio"
+						class=""
 						default="1"
 						label="TPL_52N-2012_FIELD_SHOW_COMPONENT_LABEL"
 						description="TPL_52N-2012_FIELD_SHOW_COMPONENT_DESC"
@@ -200,6 +100,7 @@
 				</field>
 				<field name="logoType"
 						type="list"
+						class=""
 						default="image"
 						label="TPL_52N-2012_FIELD_LOGO_TYPE_LABEL"
 						description="TPL_52N-2012_FIELD_LOGO_TYPE_DESC"
@@ -209,18 +110,21 @@
 				</field>
 				<field name="logoText"
 						type="text"
+						class=""
 						default="52°North"
 						label="TPL_52N-2012_FIELD_LOGO_TEXT_LABEL"
 						description="TPL_52N-2012_FIELD_LOGO_TEXT_DESC"
 						filter="string" />
 				<field name="sloganText"
 						type="text"
+						class=""
 						default="exploring horizons"
 						label="TPL_52N-2012_FIELD_SLOGAN_TEXT_LABEL"
 						description="TPL_52N-2012_FIELD_SLOGAN_TEXT_DESC"
 						filter="string" />
 				<field name="ja_screen"
 						type="list"
+						class=""
 						default="wide"
 						label="TPL_52N-2012_FIELD_JA_SCREEN_LABEL"
 						description="TPL_52N-2012_FIELD_JA_SCREEN_DESC"
@@ -229,6 +133,7 @@
 				</field>
 				<field name="ja_color"
 						type="list"
+						class=""
 						default="default"
 						label="TPL_52N-2012_FIELD_JA_COLOR_LABEL"
 						description="TPL_52N-2012_FIELD_JA_COLOR_DESC"
@@ -237,6 +142,7 @@
 				</field>
 				<field name="menutype"
 						type="list"
+						class=""
 						default="mainmenu"
 						label="TPL_52N-2012_FIELD_MENUTYPE_LABEL"
 						description="TPL_52N-2012_FIELD_MENUTYPE_DESC"
@@ -245,6 +151,7 @@
 				</field>
 				<field name="ja_menu"
 						type="list"
+						class=""
 						default="css"
 						label="TPL_52N-2012_FIELD_JA_MENU_LABEL"
 						description="TPL_52N-2012_FIELD_JA_MENU_DESC"

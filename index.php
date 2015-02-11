@@ -167,8 +167,7 @@ $app = JFactory::getApplication();
                     <div id="ja-content" class="clearfix">
                         <jdoc:include type="message" />
                         <div id="ja-current-content" class="clearfix">
-							<jdoc:include type="modules" name="debug" />
-                            <jdoc:include type="component" />
+							<jdoc:include type="component" />
                             <?php if($this->countModules('banner')) : ?>
 								<!--
 									BEGIN: BANNER
@@ -280,5 +279,6 @@ $app = JFactory::getApplication();
 		<p><img src="http://wiki.52north.org/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p>
 	</noscript>
 	<!-- END: Piwik -->
+	<jdoc:include type="modules" name="debug" style="none" />
   </body>
 </html>

@@ -298,10 +298,17 @@ table.adminform {
 	padding: 0 0 0 17px;
 }
 
-.category {
-	font-size: 125%;
-	font-weight: bold;
+ul.category {
+	list-style: none;
+	
 }
+
+ul.category li {
+	display: inline;
+	background: none;
+	padding-left: 0px;
+}
+
 
 h1.componentheading, .componentheading {
 	margin: 0 0 10px;
@@ -1442,7 +1449,25 @@ dl.search-results dd.result-url {}
 	font-weight: normal;
 }
 
-/* Feed Links get H5 instead H4 in Joomla 3 => hence we increase the font size */
+/*
+ * Feed Links get H5 instead H4 in Joomla 3 => hence we increase the font size
+ *
+ *****************************************************************************/
 h5.feed-link {
 	font-size: 110%;
+}
+
+/*
+ * Contact styling
+ *
+ *****************************************************************************/
+.contact-name {
+	font-weight: bold;
+}
+
+.contact-details {
+}
+
+div.pagination {
+	text-align: center;
 }

@@ -921,6 +921,12 @@ p.site-slogan {
 }
 
 /* breadcrumbs */
+ul.breadcrumb li {
+	display: inline;
+	background: none;
+	padding: 0px;
+}
+
 #ja-pathwaywrap {
 	/*padding: 0 0 0 25px;*/
         padding: 0;

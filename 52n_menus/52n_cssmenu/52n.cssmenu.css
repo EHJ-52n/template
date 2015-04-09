@@ -67,7 +67,6 @@
 	padding: 0 20px 4px;
 	color: #fff;
 	font-size: 100%;
-	/*font-weight: bold;*/
 	letter-spacing: 1px;
 }
 
@@ -95,13 +94,7 @@
 
 /* 2nd level and above */
 #ja-cssmenu li ul {
-	/*border: 2px solid #626250;*/
-	/*border-bottom-width: 1px;*/
-	/*background: url(../../images/trans-bg.png);*/
-        background-color: #626250;
-        /*filter:alpha(opacity=95); /* Internet Explorer */
-        /*-moz-opacity: 0.95; /* Mozilla Browser */
-        /*opacity: 0.95; /* Opera */
+    background-color: #626250;
 }
 
 #ja-cssmenu li ul li {
@@ -122,11 +115,6 @@
 	font-size: 92%;
         width: 17.4em;
 	w\idth: 16.9em;
-}
-
-#ja-cssmenu li.havesubchild,
-#ja-cssmenu li.havesubchild-active {
-	/*background: url(../../images/arrow3.png) no-repeat 94% 50%;*/
 }
 
 #ja-cssmenu li ul a:hover,

@@ -80,7 +80,8 @@
 #ja-cssmenu li.sfhover,
 #ja-cssmenu li.havechildsfhover,
 #ja-cssmenu li.havechild-activesfhover {
-	background: url(../../images/mainnav-hover.gif) no-repeat center bottom;
+	background: url(../../images/mainnav-active.gif) no-repeat center bottom;
+	/* another option is mainnav-hover.gif */
 	color: #fff;
 }
 
@@ -133,9 +134,8 @@
 }
 
 #ja-cssmenu ul li a.active {
-	background: none !important;
-	color: #66c5e4;
-	/*font-weight: bold;*/
+	background: #66c5e4;
+	color: #fff;
 }
 
 #ja-cssmenu ul li a.active:hover,

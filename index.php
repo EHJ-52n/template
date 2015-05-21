@@ -89,7 +89,7 @@ $app = JFactory::getApplication();
         <li><a href="<?php echo $tmpTools->getCurrentURL();?>#ja-col1" title="<?php echo JText::_("Skip to 1st column");?>"><?php echo JText::_("Skip to 1st column");?></a></li>
         <li><a href="<?php echo $tmpTools->getCurrentURL();?>#ja-col2" title="<?php echo JText::_("Skip to 2nd column");?>"><?php echo JText::_("Skip to 2nd column");?></a></li>
     </ul>
-    <div style="height:90px; background: url('<?php echo $this->baseurl ?>/templates/<?php echo $this->template; ?>/images/bg.png') 50% 50% no-repeat;">
+    <div id="bg_h">
         <jdoc:include type="modules" name="vitrine" />
     </div>
     <div id="ja-wrapper">

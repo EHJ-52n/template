@@ -1458,6 +1458,23 @@ h5.feed-link {
 }
 
 /*
+ * Add header background styling to template CSS.
+ * In the code, the image will be overriden
+ */
+ #bg_h {
+     height: 90px;
+     padding:0;
+     margin:0;
+     width: 100%;
+     min-width: 920px;
+     background-image: url("/images/external-sites-template/bg.png");
+     background-repeat: no-repeat;
+     background-color: #fff;
+     background-position: center;
+     background-attachment: scroll;
+ }
+
+/*
  * Contact styling
  *
  *****************************************************************************/

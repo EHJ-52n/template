@@ -52,7 +52,7 @@ img, img a {
     min-width: 920px;
     background-image: url("http://52north.org/images/external-sites-template/bg.png");
     background-repeat: no-repeat;
-    background-color: transparent;
+    background-color: #fff;
     background-position: center;
     background-attachment: scroll;
 }

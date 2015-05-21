@@ -1469,7 +1469,7 @@ h5.feed-link {
      min-width: 920px;
      background-image: url("/images/external-sites-template/bg.png");
      background-repeat: no-repeat;
-     background-color: transparent;
+     background-color: #fff;
      background-position: center;
      background-attachment: scroll;
  }

@@ -50,7 +50,11 @@ img, img a {
     margin:0;
     width: 100%;
     min-width: 920px;
-    background: url("http://52north.org/images/external-sites-template/bg.png") no-repeat transparent;
+    background-image: url("http://52north.org/images/external-sites-template/bg.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: center;
+    background-attachment: scroll;
 }
 #navigation_h {
     background: url("http://52north.org/images/external-sites-template/mainnav-bg.gif") repeat-x scroll center top transparent;

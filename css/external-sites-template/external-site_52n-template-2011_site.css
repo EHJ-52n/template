@@ -50,14 +50,14 @@ img, img a {
     margin:0;
     width: 100%;
     min-width: 920px;
-    background-image: url("http://52north.org/images/external-sites-template/bg.png");
+    background-image: url("//52north.org/images/external-sites-template/bg.png");
     background-repeat: no-repeat;
     background-color: #fff;
     background-position: center;
     background-attachment: scroll;
 }
 #navigation_h {
-    background: url("http://52north.org/images/external-sites-template/mainnav-bg.gif") repeat-x scroll center top transparent;
+    background: url("//52north.org/images/external-sites-template/mainnav-bg.gif") repeat-x scroll center top transparent;
     color: #FFFFFF;
     height: 50px;
     min-width: 920px;
@@ -106,7 +106,7 @@ img, img a {
 
 
 #breadcrumbs {
-	background:url("http://52north.org/images/external-sites-template/52n-logo.gif") no-repeat scroll left top transparent;
+	background:url("//52north.org/images/external-sites-template/52n-logo.gif") no-repeat scroll left top transparent;
 	padding:0;
 	height: 90px;
 	background-color: #FFF;
@@ -128,7 +128,7 @@ img, img a {
 }
 #navcolumn h5 {
     color: #FFFFFF;
-    background:url("http://52north.org/images/external-sites-template/h3-bg-hilite.gif") no-repeat scroll left center transparent;
+    background:url("//52north.org/images/external-sites-template/h3-bg-hilite.gif") no-repeat scroll left center transparent;
     font-size: 11px;
     font-weight: bold;
     line-height:28px;
@@ -182,7 +182,7 @@ img, img a {
 }
 /* footer navigation contains footer box */
 #f_navigation {
-    background: url("http://52north.org/images/external-sites-template/hline.gif") repeat-x bottom transparent;
+    background: url("//52north.org/images/external-sites-template/hline.gif") repeat-x bottom transparent;
     background-color: #626250;
     color:#999999;
     padding:10px 0;
@@ -205,7 +205,7 @@ img, img a {
     padding:0;
 }
 #f_navigation ul li {
-    background:url("http://52north.org/images/external-sites-template/arrow.png") no-repeat scroll 2px 7px transparent;
+    background:url("//52north.org/images/external-sites-template/arrow.png") no-repeat scroll 2px 7px transparent;
     margin:0;
     padding:0 0 0 20px;
 }
@@ -239,7 +239,7 @@ img, img a {
     top:6px;
 }
 #f_bottom li {
-    background:url("http://52north.org/images/external-sites-template/vline.gif") no-repeat scroll left center transparent;
+    background:url("//52north.org/images/external-sites-template/vline.gif") no-repeat scroll left center transparent;
     display: inline;
     padding: 0 15px;
 }
@@ -267,7 +267,7 @@ li#fb_exception {
     color: #FFFFFF;
 }
 #navigation_m li.current_page_item  {
-    background: url("http://52north.org/images/external-sites-template/mainnav-active.gif") no-repeat scroll center bottom transparent;
+    background: url("//52north.org/images/external-sites-template/mainnav-active.gif") no-repeat scroll center bottom transparent;
     background-color: #66C6E4;
     padding: 12px 20px 17px 20px;
 }
